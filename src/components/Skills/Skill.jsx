@@ -2,7 +2,7 @@ import React from 'react';
 import Level from './Level';
 import { Grid, Typography, Icon } from '@mui/material';
 
-const Skill = ({ icon, name, level }) => {
+const Skill = ({ icon, name, level, text}) => {
   return (
     <Grid item md={6} container alignItems="center">
           <Grid item xs={3}>
@@ -16,8 +16,8 @@ const Skill = ({ icon, name, level }) => {
               {name}
             </Typography>
           </Grid>
-          <Grid item xs={6} justifyContent="center">
-            <Level level={level} />
+          <Grid item xs={6} paddingLeft={'1rem'} justifyContent="center">
+            <Level level={level} text={text} />
           </Grid>
         </Grid>
   )

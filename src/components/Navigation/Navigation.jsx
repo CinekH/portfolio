@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Navigation = () => {
+const Navigation = ({ text, setLanguage }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -37,7 +37,7 @@ const Navigation = () => {
                 onClick={handleClick}
                 color="inherit"
               >
-                <MenuIcon />
+                <MenuIcon color="primary" />
               </IconButton>
               <Menu
               anchorEl={anchorEl}
@@ -48,41 +48,41 @@ const Navigation = () => {
                 }}
               >
                 <MenuItem>
-                  <Typography textAlign="center">HOME</Typography>
+                  <Typography textAlign="center">{text?.NavigationHome}</Typography>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">ABOUT ME</Typography>
+                  <Typography textAlign="center">{text?.NavigationAbout}</Typography>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">SKILLS</Typography>
+                  <Typography textAlign="center">{text?.NavigationSkills}</Typography>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">PROJECTS</Typography>
+                  <Typography textAlign="center">{text?.NavigationProjects}</Typography>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">CONTACT</Typography>
+                  <Typography textAlign="center">{text?.NavigationContact}</Typography>
                 </MenuItem>
               </Menu>
             </Box>
             <Box sx={{ flexGrow: 3, display: { xs: "none", md: "flex" } }}>
               <Typography variant="h5" color="white" sx={{ flexGrow: 1 }}>
-                HOME
+              {text?.NavigationHome}
               </Typography>
               <Typography variant="h5" color="white" sx={{ flexGrow: 1 }}>
-                ABOUT ME
+              {text?.NavigationAbout}
               </Typography>
               <Typography variant="h5" color="white" sx={{ flexGrow: 1 }}>
-                SKILLS
+              {text?.NavigationSkills}
               </Typography>
               <Typography variant="h5" color="white" sx={{ flexGrow: 1 }}>
-                PROJECTS
+              {text?.NavigationProjects}
               </Typography>
               <Typography variant="h5" color="white" sx={{ flexGrow: 1 }}>
-                CONTACT
+              {text?.NavigationContact}
               </Typography>
             </Box>
             <Box color="white">
-              <Button>PL</Button>|<Button>EN</Button>
+              <Button onClick={() => setLanguage('pl')} >PL</Button>|<Button onClick={() => setLanguage('en')} >EN</Button>
             </Box>
           </Toolbar>
         </Container>
