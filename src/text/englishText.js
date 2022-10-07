@@ -34,12 +34,14 @@ export const englishText = {
       Details: `This is a tournament bracket creating tool. Currently it allows the user to create single elimination bracket, editing it and sharing 
       link to it. The main reason to create this project was practicing handwritten CSS and coding unusual CSS structures, rarely seen on common web apps.`,
       Link: "https://bracketo.netlify.app/",
+      Github: "https://github.com/CinekH/bracketo",
     },
     {
       Name: "Transfermarkt Scraper",
       Details: `Simple app which allows the user to see all the matches played by searched team in current season. Data are scrapet from http://transfermarkt.com, 
       by using web scraping technique.`,
       Link: "https://transfermarkt-scrapper.netlify.app/",
+      Github: "https://github.com/CinekH/transfermarkt_scraper"
     },
   ],
 };

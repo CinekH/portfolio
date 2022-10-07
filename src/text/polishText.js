@@ -32,12 +32,14 @@ export const polishText = {
       edytowanie jej oraz udostępnianie innym poprzez kopiowanie linku. Projekt powstał w celu ćwiczenia własnoręcznie pisanego kodu CSS dla 
       nietypowych struktur, które rzadko można oglądac w typowych aplikacjach webowych.`,
       Link: "https://bracketo.netlify.app/",
+      Github: "https://github.com/CinekH/bracketo",
     },
     {
       Name: "Scraper Transfermarkt",
       Details: `Prosta aplikacja, która umożliwia użytkownikowi wyświetlenie wszystkich meczów, jakie wyszukana drużyna rozegrała w obecnym sezonie.
        Dane pobierane są w czasie rzeczywistym ze strony http://transfermarkt.com, przy użyciu techniki web scrapingu.`,
       Link: "https://transfermarkt-scrapper.netlify.app/",
+      Github: "https://github.com/CinekH/transfermarkt_scraper"
     },
   ],
 };

@@ -67,6 +67,7 @@ const Project = ({ text, imagesDirectory, textIndex }) => {
                     width: "fit-content",
                   }}
                   width={"fit-content"}
+                  href={text.Projects[textIndex].Github}
                 >
                   Github
                 </Button>
