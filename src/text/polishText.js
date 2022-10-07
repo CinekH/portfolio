@@ -14,6 +14,7 @@ export const polishText = {
   LevelsAdvanced: "ZAAWANSOWANY",
   Site: "Strona",
   ProjectDetails: "Szczegóły projektu",
+  Write: 'Napisz, jeżeli chcesz się skontaktować:',
   Projects: [
     {
       Name: "Steganografia",
@@ -22,17 +23,20 @@ export const polishText = {
         lub obrazu w nośniku, którym jest również plik graficzny. Oczywiście istnieje również możliwośc odczytania ukrytej wiadomości. Oprócz tego 
         udostępnione są inne opcje, na przykład zapisanie zakodowanego obrazu w bazie danych na koncie użytkownika. Na podstawie tej aplikacji 
         napisałem moją Pracę Inżynierską, zatutułowaną: "Ukrywanie informacji z zasosowaniem technik steganograficznych".`,
+      Link: "https://steganografiaherman.netlify.app/",
     },
     {
       Name: "Bracketo",
       Details: `Jest to narzędzie do tworzenia grafik turniejowych. Na ten moment umożliwia uczestnikowi tworzenie drabinki pojedynczej eliminacji, 
       edytowanie jej oraz udostępnianie innym poprzez kopiowanie linku. Projekt powstał w celu ćwiczenia własnoręcznie pisanego kodu CSS dla 
       nietypowych struktur, które rzadko można oglądac w typowych aplikacjach webowych.`,
+      Link: "https://bracketo.netlify.app/",
     },
     {
       Name: "Scraper Transfermarkt",
       Details: `Prosta aplikacja, która umożliwia użytkownikowi wyświetlenie wszystkich meczów, jakie wyszukana drużyna rozegrała w obecnym sezonie.
        Dane pobierane są w czasie rzeczywistym ze strony http://transfermarkt.com, przy użyciu techniki web scrapingu.`,
+      Link: "https://transfermarkt-scrapper.netlify.app/",
     },
   ],
 };

@@ -10,7 +10,7 @@ import {
   Typography,
   IconButton,
   Link,
-  Divider
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -43,7 +43,7 @@ const Navigation = ({ text, setLanguage }) => {
       document.getElementById("Contact")?.getBoundingClientRect().top +
       window.pageYOffset;
     const ProjectsPos =
-      document.getElementById("Project")?.getBoundingClientRect().top +
+      document.getElementById("Projects")?.getBoundingClientRect().top +
       window.pageYOffset;
     if (window.scrollY < AboutPos) {
       return setCurrentPosition("Home");
@@ -92,29 +92,83 @@ const Navigation = ({ text, setLanguage }) => {
                 }}
               >
                 <MenuItem>
-                  <Typography textAlign="center">
+                  <Link
+                    onClick={() => {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                    color={
+                      currentPosition === "Home" ? "primary" : "primary.light"
+                    }
+                    underline={"hover"}
+                    sx={{ flexGrow: 1, cursor: "pointer" }}
+                  >
                     {text?.NavigationHome}
-                  </Typography>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">
+                  <Link
+                    onClick={() => {
+                      scrollToSection("AboutMe");
+                    }}
+                    color={
+                      currentPosition === "AboutMe"
+                        ? "primary"
+                        : "primary.light"
+                    }
+                    underline={"hover"}
+                    sx={{ flexGrow: 1, cursor: "pointer" }}
+                  >
                     {text?.NavigationAbout}
-                  </Typography>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">
+                  <Link
+                    onClick={() => {
+                      scrollToSection("Skills");
+                    }}
+                    color={
+                      currentPosition === "Skills" ? "primary" : "primary.light"
+                    }
+                    underline={"hover"}
+                    sx={{ flexGrow: 1, cursor: "pointer" }}
+                  >
                     {text?.NavigationSkills}
-                  </Typography>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">
+                  <Link
+                    onClick={() => {
+                      scrollToSection("Projects");
+                    }}
+                    color={
+                      currentPosition === "Projects"
+                        ? "primary"
+                        : "primary.light"
+                    }
+                    underline={"hover"}
+                    sx={{ flexGrow: 1, cursor: "pointer" }}
+                  >
                     {text?.NavigationProjects}
-                  </Typography>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Typography textAlign="center">
+                  <Link
+                    onClick={() => {
+                      scrollToSection("Contact");
+                    }}
+                    color={
+                      currentPosition === "Contact"
+                        ? "primary"
+                        : "primary.light"
+                    }
+                    underline={"hover"}
+                    sx={{ flexGrow: 1, cursor: "pointer" }}
+                  >
                     {text?.NavigationContact}
-                  </Typography>
+                  </Link>
                 </MenuItem>
               </Menu>
             </Box>
@@ -127,7 +181,7 @@ const Navigation = ({ text, setLanguage }) => {
                   });
                 }}
                 variant="h5"
-                color={currentPosition === 'Home' ? 'primary' : 'primary.light'}
+                color={currentPosition === "Home" ? "primary" : "primary.light"}
                 underline={"hover"}
                 sx={{ flexGrow: 1, cursor: "pointer" }}
               >
@@ -138,7 +192,9 @@ const Navigation = ({ text, setLanguage }) => {
                   scrollToSection("AboutMe");
                 }}
                 variant="h5"
-                color={currentPosition === 'About' ? 'primary' : 'primary.light'}
+                color={
+                  currentPosition === "About" ? "primary" : "primary.light"
+                }
                 underline={"hover"}
                 sx={{ flexGrow: 1, cursor: "pointer" }}
               >
@@ -149,32 +205,44 @@ const Navigation = ({ text, setLanguage }) => {
                   scrollToSection("Skills");
                 }}
                 variant="h5"
-                color={currentPosition === 'Skills' ? 'primary' : 'primary.light'}
+                color={
+                  currentPosition === "Skills" ? "primary" : "primary.light"
+                }
                 underline={"hover"}
                 sx={{ flexGrow: 1, cursor: "pointer" }}
               >
                 {text?.NavigationSkills}
               </Link>
               <Link
+                onClick={() => {
+                  scrollToSection("Projects");
+                }}
                 variant="h5"
-                color={currentPosition === 'Projects' ? 'primary' : 'primary.light'}
+                color={
+                  currentPosition === "Projects" ? "primary" : "primary.light"
+                }
                 underline={"hover"}
-                sx={{ flexGrow: 1 }}
+                sx={{ flexGrow: 1, cursor: "pointer" }}
               >
                 {text?.NavigationProjects}
               </Link>
               <Link
+                onClick={() => {
+                  scrollToSection("Contact");
+                }}
                 variant="h5"
-                color={currentPosition === 'Contact' ? 'primary' : 'primary.light'}
+                color={
+                  currentPosition === "Contact" ? "primary" : "primary.light"
+                }
                 underline={"hover"}
-                sx={{ flexGrow: 1 }}
+                sx={{ flexGrow: 1, cursor: "pointer" }}
               >
                 {text?.NavigationContact}
               </Link>
             </Box>
-            <Box color="white" display={'flex'}>
+            <Box color="white" display={"flex"}>
               <Button onClick={() => setLanguage("pl")}>PL</Button>
-              <Divider orientation="vertical" flexItem/>
+              <Divider orientation="vertical" flexItem />
               <Button onClick={() => setLanguage("en")}>EN</Button>
             </Box>
           </Toolbar>

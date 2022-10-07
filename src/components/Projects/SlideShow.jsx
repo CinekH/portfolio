@@ -27,7 +27,6 @@ const SlideShow = ({ images }) => {
                 transitionDuration: "500ms",
                 position: "absolute",
                 maxWidth: "100%",
-                height: "auto",
                 borderRadius: "0.5rem",
               }}
               src={element}

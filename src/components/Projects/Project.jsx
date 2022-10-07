@@ -27,18 +27,17 @@ const Project = ({ text, imagesDirectory, textIndex }) => {
       <Grid
         position={"relative"}
         container
-        overflow={"hidden"}
-        sx={{ width: "100%", aspectRatio: "2.10/1" }}
+        sx={{ width: "100%", aspectRatio: "2/1" }}
       >
         <Grid item xs={6} container direction={"column"}>
-          <Grid item xs={3}>
-            <Grid item height={"100%"} xs={2}>
+          <Grid item sm={3}>
+            <Grid item height={"100%"} sm={2}>
               <Divider sx={{ borderColor: "#90caf9" }} orientation="vertical" />
             </Grid>
           </Grid>
-          <Grid marginTop={"1.5rem"} item xs={7} container zIndex={1}>
-            <Grid item xs={2}></Grid>
-            <Grid item xs={10}>
+          <Grid marginTop={"1.5rem"} item sm={7} container zIndex={1}>
+            <Grid item sm={2}></Grid>
+            <Grid item sm={10}>
               <Typography
                 fontFamily={"Fraunces"}
                 sx={{
@@ -73,6 +72,7 @@ const Project = ({ text, imagesDirectory, textIndex }) => {
                 </Button>
                 <Button
                   endIcon={<ArrowForwardIcon />}
+                  href={text.Projects[textIndex].Link}
                   sx={{
                     paddingLeft: 0,
                     fontSize: "1rem",
@@ -99,7 +99,7 @@ const Project = ({ text, imagesDirectory, textIndex }) => {
             {text.ProjectDetails}
           </Typography>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item sm={7}>
           <Typography color={"white"} textAlign={"justify"} variant="body1">
             {text.Projects[textIndex].Details}
           </Typography>
