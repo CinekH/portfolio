@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 import { useState, useEffect } from 'react';
 
@@ -23,21 +24,23 @@ function App() {
     }
     localStorage.setItem('language', language);
   }, [language])
-  
 
   const darkTheme = createTheme({ palette: { mode: 'dark' } });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Navigation setLanguage={setLanguage} text={text} />
-      <section>
+      <section id="Home">
         <Home text={text} />
       </section>
-      <section>
+      <section id="AboutMe">
         <AboutMe text={text} />
       </section>
-      <section>
+      <section id="Skills">
         <Skills text={text} />
       </section>
+      <section id="Projects">
+        <Projects text={text} />
+      </section>
+      <Navigation setLanguage={setLanguage} text={text} />
     </ThemeProvider>
   );
 }

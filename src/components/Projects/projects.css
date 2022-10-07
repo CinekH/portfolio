@@ -1,0 +1,4 @@
+.display-none {
+    left: 150% !important;
+    transition-duration: 500ms;
+}
