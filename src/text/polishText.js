@@ -24,6 +24,7 @@ export const polishText = {
         udostępnione są inne opcje, na przykład zapisanie zakodowanego obrazu w bazie danych na koncie użytkownika. Na podstawie tej aplikacji 
         napisałem moją Pracę Inżynierską, zatutułowaną: "Ukrywanie informacji z zasosowaniem technik steganograficznych".`,
       Link: "https://steganografiaherman.netlify.app/",
+      Github: "https://github.com/CinekH/SteganografiaMH"
     },
     {
       Name: "Bracketo",

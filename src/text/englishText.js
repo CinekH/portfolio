@@ -27,6 +27,7 @@ export const englishText = {
       for example saving encrypted image in database. My Engineer's Thesis was based on this project, entitled 
       "Hidding data using steganography techniques".`,
       Link: "https://steganografiaherman.netlify.app/",
+      Github: "https://github.com/CinekH/SteganografiaMH"
     },
     {
       Name: "Bracketo",
