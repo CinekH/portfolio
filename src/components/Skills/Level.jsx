@@ -26,9 +26,6 @@ const Level = ({ level, text }) => {
           );
         })}
       </Grid>
-      <Grid item>
-        <Typography variant="body1" color="white">{levels[level - 1]}</Typography>
-      </Grid>
     </Grid>
   );
 };
