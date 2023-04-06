@@ -16,9 +16,6 @@ const Skill = ({ icon, name, level, text}) => {
               {name}
             </Typography>
           </Grid>
-          <Grid item xs={6} paddingLeft={'1rem'} justifyContent="center">
-            <Level level={level} text={text} />
-          </Grid>
         </Grid>
   )
 }
